@@ -3,6 +3,7 @@ var path = require("path");
 var cors = require("cors");
 var itemRouter = require("./routes/item");
 var categoryRouter = require("./routes/category");
+var stockRouter = require("./routes/stock");
 var app = express();
 
 // Set up mongoose connection
@@ -29,6 +30,7 @@ app.get("/greet", (req, res) => {
 
 app.use("/item", itemRouter);
 app.use("/category", categoryRouter);
+app.use("/stock", stockRouter);
 
 app.listen(4000, () => {
   console.log("Shop server listening on 4000");

@@ -11,9 +11,10 @@ exports.addCategory = (req, res) => {
         });
       }
 
-      return res
-        .status(201)
-        .json({ success: `${result.name} created successfully` });
+      return res.status(201).json({
+        success: `${result.name} created successfully`,
+        result: result
+      });
     });
   } else return res.status(403).json({ error: "Name should not be empty" });
 };
