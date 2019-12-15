@@ -20,10 +20,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/", (req, res) => {
-  res.send("hi user");
-});
-
 app.get("/greet", (req, res) => {
   res.send("<h1>HI UMar</h1>");
 });
