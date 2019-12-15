@@ -28,6 +28,6 @@ app.use("/item", itemRouter);
 app.use("/category", categoryRouter);
 app.use("/stock", stockRouter);
 
-app.listen(4000, () => {
+app.listen(process.env.PORT || 4000, () => {
   console.log("Shop server listening on 4000");
 });
